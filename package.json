@@ -1,0 +1,23 @@
+{
+  "name": "jazz-con-app",
+  "version": "1.0.0",
+  "description": "Alexa App for Jazz Con",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/britneydossett/jazz-con-app.git"
+  },
+  "author": "Britney Dossett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/britneydossett/jazz-con-app/issues"
+  },
+  "homepage": "https://github.com/britneydossett/jazz-con-app#readme",
+  "dependencies": {
+    "alexa-app": "^3.1.0",
+    "alexa-app-server": "^3.0.0"
+  }
+}
