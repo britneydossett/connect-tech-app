@@ -1,0 +1,24 @@
+; This file is for unifying the coding style for different editors and IDEs.
+; More information at http://editorconfig.org
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.go]
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+
+[bower.json]
+indent_size = 2
+
+[package.json]
+indent_size = 2

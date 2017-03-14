@@ -1,0 +1,7 @@
+docs
+node-modules
+.npm-init.js
+/test
+/coverage
+./.esdoc.json
+./.vscode

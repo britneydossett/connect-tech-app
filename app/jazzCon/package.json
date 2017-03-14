@@ -1,0 +1,14 @@
+{
+  "name": "jazzCon",
+  "version": "1.0.0",
+  "description": "Jazz Con App",
+  "main": "index.js",
+  "author": "Britney Dossett britney.dosset@turner.com",
+  "license": "ISC",
+  "alexa": {
+    "applicationId":""
+  },
+  "dependencies": {
+    "alexa-app": "3.2.0"
+  }
+}
