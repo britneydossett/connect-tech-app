@@ -8,7 +8,7 @@
     "start": "PORT=8081 ENVIRONMENT=dev ENABLEPOLLER=1 nodemon server.js"
   },
   "engines": {
-    "node": "6.9.5"
+    "node": "6.10.0"
   },
   "repository": {
     "type": "git",
