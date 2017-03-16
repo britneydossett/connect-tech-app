@@ -9,6 +9,7 @@ let server = new AlexaAppServer({
     app_root: '/alexa/',
     public_html: 'public',
     verify: false
+    // debug: false
 });
 
 server.start();

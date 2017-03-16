@@ -11,13 +11,14 @@ config = {
         appName: 'jazz-con-app'
     },
     dev: {
-        // marvelAPI: {
-        //     v1: {
-        //         url: '',
-        //     }
-        // }
+        ronSwansonApi: {
+            v1: {
+                url: 'http://ron-swanson-quotes.herokuapp.com/v2'
+            }
+        }
     }
 };
+//http://comicvine.gamespot.com/api/characters/?api_key=888021d98fae1ce9b14430adad16bfea971f5ca0&filter=name:thor&format=json
 
 nconf.env().argv();
 // make sure we have an environment set or die

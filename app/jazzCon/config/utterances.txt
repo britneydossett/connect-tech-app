@@ -1,0 +1,8 @@
+getRonSwansonQuote give me Ron
+getRonSwansonQuote tell me a Ron Swanson quote
+getRonSwansonQuote give me a Ron Swanson quote
+getRonSwansonQuote find me a Ron Swanson quote
+getRonSwansonQuote what is Ron Swanson up to
+getRonSwansonQuote what is Ron Swanson doing
+getRonSwansonQuote what does Ron Swanson have to say about that
+getRonSwansonQuote Ron Swanson
