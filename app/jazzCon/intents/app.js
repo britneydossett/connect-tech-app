@@ -9,7 +9,7 @@ const makeCard = require('./makeCard'),
 
 let jazzCon = function (app) {
     app.makeCard = makeCard;
-    // app.marvelAPI = marvelAPI;
+    // app.ronSwansonApi = ronSwansonApi;
     app._ = _;
 
     /**

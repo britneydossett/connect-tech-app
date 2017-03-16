@@ -11,7 +11,7 @@ config = {
         appName: 'jazz-con-app'
     },
     dev: {
-        // marvelAPI: {
+        // ronSwansonAPI: {
         //     v1: {
         //         url: '',
         //     }
