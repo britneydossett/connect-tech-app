@@ -6,12 +6,7 @@ module.exports = function (app) {
         .then( (quote) => {
             let finalQuote = quote;
             app.makeCard(finalQuote, response);
-            // return response.say(`${finalQuote}`).shouldEndSession(true).send();
-            return response.audioPlayerPlayStream('ENQUEUE', {
-                        "url": 'http://api.soundcloud.com/tracks/13158665',
-                        "token": 'playlist',
-                        "offsetInMilliseconds": 0
-                    }).send();
+            return response.say(`${finalQuote}`).shouldEndSession(true).send();
         });
     });
 };
