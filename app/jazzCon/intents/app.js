@@ -42,6 +42,7 @@ let jazzCon = function (app) {
      *      AMAZON.HelpIntent
      **/
     require('./amazonIntents/cancel.js')(app);
+    require('./amazonIntents/help.js')(app);
 
 };
 
