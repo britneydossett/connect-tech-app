@@ -15,6 +15,11 @@ config = {
             v1: {
                 url: 'http://ron-swanson-quotes.herokuapp.com/v2'
             }
+        },
+        audioApi: {
+            v1: {
+                url: 'https://api.spotify.com/v1/tracks/'
+            }
         }
     }
 };

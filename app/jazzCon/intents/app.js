@@ -1,6 +1,7 @@
 'use strict';
 const makeCard = require('../lib/makeCard.js'),
     ronSwansonApi = require('../lib/ronSwansonApi.js'),
+    audiofiles = require('../lib/audiofiles.js'),
     _ = require('lodash');
 
 /**
@@ -11,6 +12,7 @@ const makeCard = require('../lib/makeCard.js'),
 let jazzCon = function (app) {
     app.makeCard = makeCard;
     app.ronSwansonApi = ronSwansonApi;
+    app.audiofiles = audiofiles;
     app._ = _;
 
     /**
@@ -24,9 +26,12 @@ let jazzCon = function (app) {
     /**
      *  Custom Intents:
      *      launch
+     *      getRonSwansonQuote
+     *      audioPlayer
      **/
     require('./customIntents/launch.js')(app);
     require('./customIntents/getRonSwansonQuote.js')(app);
+    require('./customIntents/audioPlayer.js')(app);
     /**
      *  Amazon built-in intents:
      *      AMAZON.NextIntent,

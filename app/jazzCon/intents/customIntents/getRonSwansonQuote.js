@@ -7,7 +7,7 @@ module.exports = function (app) {
             let finalQuote = quote;
             app.makeCard(finalQuote, response);
             // return response.say(`${finalQuote}`).shouldEndSession(true).send();
-            return response.audioPlayerPlayStream('REPLACE_ALL', {
+            return response.audioPlayerPlayStream('ENQUEUE', {
                         "url": 'http://api.soundcloud.com/tracks/13158665',
                         "token": 'playlist',
                         "offsetInMilliseconds": 0
