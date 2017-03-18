@@ -1,5 +1,5 @@
 'use strict';
-const makeCard = require('./makeCard'),
+const makeCard = require('./lib/makeCard'),
     _ = require('lodash');
 
 /**
@@ -10,6 +10,7 @@ const makeCard = require('./makeCard'),
 let jazzCon = function (app) {
     app.makeCard = makeCard;
     // app.ronSwansonApi = ronSwansonApi;
+    // app.audiofiles = audiofiles;
     app._ = _;
 
     /**
@@ -23,6 +24,8 @@ let jazzCon = function (app) {
     /**
      *  Custom Intents:
      *      launch
+     *      getRonSwansonQuote
+     *      audioPlayer
      **/
     require('./customIntents/launch.js')(app);
 

@@ -11,9 +11,14 @@ config = {
         appName: 'jazz-con-app'
     },
     dev: {
-        // ronSwansonAPI: {
+        // ronSwansonApi: {
         //     v1: {
-        //         url: '',
+        //         url: 'http://ron-swanson-quotes.herokuapp.com/v2'
+        //     }
+        // },
+        // audioApi: {
+        //     v1: {
+        //         url: 'https://api.spotify.com/v1/tracks/'
         //     }
         // }
     }
