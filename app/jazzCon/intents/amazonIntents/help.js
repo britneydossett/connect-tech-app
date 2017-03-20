@@ -1,7 +1,7 @@
 'use strict';
 
 let help = function (app) {
-    app.intent('AMAZON.HelpIntent', function (request, response) {
+    app.intent('AMAZON.HelpIntent', (request, response) => {
         response.say(`Jazz Con allows you to get a Ron Swanson quote or play music.
                     You can ask for quotes by saying - "Alexa, get a Ron Swanson quote" - or
                     you can ask for a song by saying - "Alexa, play Talking Heads".

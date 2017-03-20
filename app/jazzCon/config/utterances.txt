@@ -1,4 +1,7 @@
+
 getRonSwansonQuote give me Ron
+getRonSwansonQuote give me Ron Swanson
+getRonSwansonQuote let me hear Ron Swanson
 getRonSwansonQuote tell me a Ron Swanson quote
 getRonSwansonQuote give me a Ron Swanson quote
 getRonSwansonQuote find me a Ron Swanson quote
@@ -6,9 +9,19 @@ getRonSwansonQuote what is Ron Swanson up to
 getRonSwansonQuote what is Ron Swanson doing
 getRonSwansonQuote what does Ron Swanson have to say about that
 getRonSwansonQuote Ron Swanson
+getRonSwansonQuote Ron Swanson Quote
 getRonSwansonQuote hear a quote from Ron Swanson
 getRonSwansonQuote Ron Swanson quote
 getRonSwansonQuote hear a Ron Swanson quote
 getRonSwansonQuote listen to Ron Swanson
 
-audioPlayer play music
+audioPlayer play {NAME}
+audioPlayer play the {NAME}
+audioPlayer play music by {NAME}
+audioPlayer play music by the {NAME}
+audioPlayer give me the {NAME}
+audioPlayer give me {NAME}
+audioPlayer find me the {NAME}
+audioPlayer find me {NAME}
+audioPlayer play me the {NAME}
+audioPlayer play me {NAME}
