@@ -6,7 +6,8 @@ module.exports = function (app) {
         .then( (quote) => {
             let finalQuote = quote;
             app.makeCard(finalQuote, response);
-            return response.say(`${finalQuote}`).shouldEndSession(true).send();
+            return response.say(`${finalQuote}. Would you like to hear another quote?`)
+            .shouldEndSession(false, 'I\'m sorry, I didn’t get that. Please say that again.').send();
         });
     });
 };
