@@ -1,9 +1,10 @@
 'use strict';
 
-let config = require('../config/config'),
-    api,
+const config = require('../config/config'),
     request = require('request-promise'),
     baseURL = config.get('ronSwansonApi').v1.url;
+
+let api;
 
 function getQuote() {
 
