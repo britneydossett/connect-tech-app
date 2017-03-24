@@ -3,4 +3,7 @@ getRonSwansonQuote Ron Swanson
 getRonSwansonQuote Ron Swanson quote
 getRonSwansonQuote a Ron Swanson quote
 getRonSwansonQuote get a Ron Swanson quote
-getRonSwansonQuote what does Ron Swanson have to say?
+getRonSwansonQuote what does Ron Swanson have to say
+
+audioPlayer play {NAME}
+audioPlayer let me hear {NAME}

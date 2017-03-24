@@ -14,7 +14,6 @@ function getQuote() {
             uri: URL,
             transform: function (quote) {
                 quote = JSON.parse (quote);
-                console.log('quote', quote);
                 return quote;
             }
         };
