@@ -12,3 +12,4 @@
 ### Things to Note:
  - Final code is on branch JazzCon
  - Beginning code is on master branch
+ - We run our code on cloud9's IDE and then use that URL + /alexa/jazzCon to fill out the configuration on Amazon's developer portal.
