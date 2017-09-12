@@ -6,3 +6,4 @@ npm-debug.log
 .eslintrc
 .ignore
 .vscode
+package-lock.json

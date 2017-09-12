@@ -9,7 +9,7 @@ const makeCard = require('./lib/makeCard.js'),
 **/
 
 
-let jazzCon = function (app) {
+let connectTech = function (app) {
     app.makeCard = makeCard;
     app.ronSwansonApi = ronSwansonApi;
     app.audiofiles = audiofiles;
@@ -29,9 +29,9 @@ let jazzCon = function (app) {
      *      getRonSwansonQuote
      *      audioPlayer
      **/
-    require('./customIntents/launch.js')(app);
-    require('./customIntents/ronSwansonQuote.js')(app);
-    require('./customIntents/audioPlayer.js')(app);
+    require('./launchIntent.js')(app);
+    require('./ronSwansonIntent.js')(app);
+    require('./audioPlayerIntent.js')(app);
 
     /**
      *  Amazon built-in intents:
@@ -42,8 +42,8 @@ let jazzCon = function (app) {
      *      AMAZON.CancelIntent
      *      AMAZON.HelpIntent
      **/
-    require('./amazonIntents/cancel.js')(app);
+    require('./cancelIntent.js')(app);
 
 };
 
-module.exports = jazzCon;
+module.exports = connectTech;

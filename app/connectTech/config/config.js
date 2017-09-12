@@ -8,7 +8,7 @@ let environment,
 
 config = {
     default: {
-        appName: 'jazz-con-app'
+        appName: 'connect-tech-app'
     },
     dev: {
         ronSwansonApi: {

@@ -1,35 +1,35 @@
 {
-  "name": "jazz-con-app",
+  "name": "connect-tech-app",
   "version": "1.0.0",
-  "description": "Alexa App for Jazz Con",
+  "description": "Alexa App for ConnectTech",
   "main": "",
   "scripts": {
     "test": "test",
     "start": "PORT=8081 ENVIRONMENT=dev ENABLEPOLLER=1 nodemon server.js"
   },
   "engines": {
-    "node": "7.7.3"
+    "node": "8.4.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/britneydossett/jazz-con-app.git"
+    "url": "git+https://github.com/britneydossett/connect-tech-app.git"
   },
   "author": "Britney Dossett",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/britneydossett/jazz-con-app/issues"
+    "url": "https://github.com/britneydossett/connect-tech-app/issues"
   },
   "dependencies": {
-      "alexa-app": "^3.2.0",
-      "alexa-app-server": "^3.0.0",
-      "alexa-utterances": "0.2.1",
-      "alexa-verifier": "0.0.5",
-      "express": "^4.15.2",
-      "lodash": "^4.17.4",
-      "nconf": "^0.8.4",
-      "nodemon": "^1.11.0",
-      "request": "2.81.0",
-      "request-promise": "^4.1.1"
+    "alexa-app": "^3.2.0",
+    "alexa-app-server": "^3.0.0",
+    "alexa-utterances": "0.2.1",
+    "alexa-verifier": "0.0.5",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "nconf": "^0.8.4",
+    "nodemon": "^1.11.0",
+    "request": "2.81.0",
+    "request-promise": "^4.1.1"
   },
   "devDependencies": {
     "esdoc": "0.4.6",
