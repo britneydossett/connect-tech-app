@@ -29,9 +29,42 @@ let connectTech = function (app) {
      *      getRonSwansonQuote
      *      audioPlayer
      **/
-    require('./launchIntent.js')(app);
-    require('./ronSwansonIntent.js')(app);
-    require('./audioPlayerIntent.js')(app);
+     app.launch(function (request, response) {
+         response.say('Hello Connect Tech! You can hear a Ron Swanson Quote, or play the talking heads. What would like to hear?');
+         response.shouldEndSession(false, 'What did you say?').send();
+     });
+
+     app.intent('getRonSwansonQuote', (request, response) => {
+         return app.ronSwansonApi.getQuote()
+         .then( (quote) => {
+             let finalQuote = quote;
+             app.makeCard(finalQuote, response, 'ron');
+             return response.say(`Ron Swanson Says: ${finalQuote}.
+                                 Would you like to hear another quote?`)
+                                 .shouldEndSession(false, 'Say that again?')
+                                 .send();
+         });
+     });
+
+     app.intent('audioPlayer', {
+         slots: {NAME: 'NAME'}
+     }, (request, response) => {
+         let number = request.slot('NAME') - 1;
+         return app.audiofiles.getPlaylist()
+         .then( (playlist) => {
+             let track = playlist.tracks[number].previewURL,
+                 trackName = playlist.tracks[number].name,
+                 trackImage = `http://direct.rhapsody.com/imageserver/v2/albums/${playlist.tracks[number].albumId}/images/300x300.jpg`,
+                 audioPlayerPayload = {
+                     url: track,
+                     token: trackName,
+                     offsetInMilliseconds: 0
+                 };
+             app.makeCard(trackName, response, trackImage);
+             return response.audioPlayerPlayStream('REPLACE_ALL', audioPlayerPayload)
+                     .send();
+         });
+     });
 
     /**
      *  Amazon built-in intents:
@@ -42,7 +75,11 @@ let connectTech = function (app) {
      *      AMAZON.CancelIntent
      *      AMAZON.HelpIntent
      **/
-    require('./cancelIntent.js')(app);
+     app.intent('AMAZON.CancelIntent', (request, response) => {
+         return response.say('Goodbye JazzCon!')
+                             .shouldEndSession(true)
+                             .send();
+     });
 
 };
 
