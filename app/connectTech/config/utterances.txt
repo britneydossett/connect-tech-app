@@ -1,10 +1,16 @@
-getRonSwansonQuote let me hear Ron Swanson
+getRonSwansonQuote give me Ron
+getRonSwansonQuote tell me a Ron Swanson quote
+getRonSwansonQuote give me a Ron Swanson quote
+getRonSwansonQuote find me a Ron Swanson quote
+getRonSwansonQuote what is Ron Swanson up to
+getRonSwansonQuote what is Ron Swanson doing
+getRonSwansonQuote what does Ron Swanson have to say about that
 getRonSwansonQuote Ron Swanson
+getRonSwansonQuote hear a quote from Ron Swanson
 getRonSwansonQuote Ron Swanson quote
-getRonSwansonQuote a Ron Swanson quote
-getRonSwansonQuote get a Ron Swanson quote
-getRonSwansonQuote what does Ron Swanson have to say
+getRonSwansonQuote hear a Ron Swanson quote
+getRonSwansonQuote listen to Ron Swanson
 
-audioPlayer play number {NAME}
-audioPlayer let me hear number {NAME}
+audioPlayer play {NAME}
+audioPlayer let me hear {NAME}
 audioPlayer {NAME}

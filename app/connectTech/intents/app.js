@@ -35,35 +35,13 @@ let connectTech = function (app) {
      });
 
      app.intent('getRonSwansonQuote', (request, response) => {
-         return app.ronSwansonApi.getQuote()
-         .then( (quote) => {
-             let finalQuote = quote;
-             app.makeCard(finalQuote, response, 'ron');
-             return response.say(`Ron Swanson Says: ${finalQuote}.
-                                 Would you like to hear another quote?`)
-                                 .shouldEndSession(false, 'Say that again?')
-                                 .send();
-         });
+
      });
 
      app.intent('audioPlayer', {
          slots: {NAME: 'NAME'}
      }, (request, response) => {
-         let number = request.slot('NAME') - 1;
-         return app.audiofiles.getPlaylist()
-         .then( (playlist) => {
-             let track = playlist.tracks[number].previewURL,
-                 trackName = playlist.tracks[number].name,
-                 trackImage = `http://direct.rhapsody.com/imageserver/v2/albums/${playlist.tracks[number].albumId}/images/300x300.jpg`,
-                 audioPlayerPayload = {
-                     url: track,
-                     token: trackName,
-                     offsetInMilliseconds: 0
-                 };
-             app.makeCard(trackName, response, trackImage);
-             return response.audioPlayerPlayStream('REPLACE_ALL', audioPlayerPayload)
-                     .send();
-         });
+
      });
 
     /**
