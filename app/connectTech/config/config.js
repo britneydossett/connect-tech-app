@@ -16,7 +16,7 @@ config = {
         },
         audioApi: {
             v1: {
-                url: 'https://api.napster.com/v2.1/tracks/top?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm'
+                url: 'https://api.spotify.com/v1/tracks/'
             }
         }
     }

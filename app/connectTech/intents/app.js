@@ -30,7 +30,7 @@ let connectTech = function (app) {
      *      audioPlayer
      **/
      app.launch(function (request, response) {
-         response.say('Hello Connect Tech! You can hear a Ron Swanson Quote, or I can play you a song. What would like to hear?');
+         response.say('Hello Connect Tech! You can hear a Ron Swanson Quote, or play the talking heads. What would like to hear?');
          response.shouldEndSession(false, 'What did you say?').send();
      });
 
@@ -49,20 +49,23 @@ let connectTech = function (app) {
      app.intent('audioPlayer', {
          slots: {NAME: 'NAME'}
      }, (request, response) => {
-         let number = request.slot('NAME') - 1;
-         return app.audiofiles.getPlaylist()
+         let name = request.slot('NAME');
+         return app.audiofiles.getPlaylist(name)
          .then( (playlist) => {
-             let track = playlist.tracks[number].previewURL,
-                 trackName = playlist.tracks[number].name,
-                 trackImage = `https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjx-IqX5-rSAhUp0YMKHU99DIYQjRwIBw&url=http%3A%2F%2Fswansonquotes.com%2Ftag%2Ftammy%2F&psig=AFQjCNH4MgvwWW1VmMkitYufwqsh9U1CSg&ust=1490295945335488`,
+             let track = playlist.preview_url,
+                 trackName = playlist.name,
+                 trackImage = playlist.album.images[0].url,
                  audioPlayerPayload = {
-                     url: 'https://listen.vo.llnwd.net/g3/1/2/4/9/1/1355519421.mp3',
-                     token: trackName,
-                     offsetInMilliseconds: 0
+                    url: track,
+                    token: trackName,
+                    expectedPreviousToken: 'some_previous_token',
+                    offsetInMilliseconds: 0
                  };
              app.makeCard(trackName, response, trackImage);
              return response.audioPlayerPlayStream('ENQUEUE', audioPlayerPayload)
                      .send();
+         }).catch((error) => {
+             console.log('error', error);
          });
      });
 
